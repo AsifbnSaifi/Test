@@ -38,7 +38,13 @@ db.connect((err) => {
   }
 });
 
+app.get("/" ,(req , res) =>{
+    res.send('Save')
+})
+
 app.post('/upload', upload.single('file'), (req, res) => {
+
+   res.send('upload')
   const { filename, path } = req.file;
 
   // Read Excel file
